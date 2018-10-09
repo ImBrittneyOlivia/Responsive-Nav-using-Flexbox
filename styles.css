@@ -1,0 +1,34 @@
+nav {
+  font-size: 2rem;
+  background-color: #f1f1f1;
+}
+
+/* felx container is the ul tag*/
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* places the items next to each other*/
+  /* justify-content: space-around; */
+}
+
+nav ul li {
+  cursor: pointer;
+  padding: 0.5rem;
+  flex: auto; /* space distributed within the item.*/
+  text-align: center;
+}
+nav ul li:hover {
+  background-color: #555;
+  color: white;
+}
+
+/* making it responsive by adding media query*/
+@media all and (max-width: 400px) {
+  nav ul {
+    flex-direction: column; /* changed it so when screen is less than 400px it will go from a row to a column (up and down)*/
+  }
+  nav ul li {
+    text-align: center;
+  }
+}
